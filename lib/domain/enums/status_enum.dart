@@ -1,0 +1,1 @@
+enum StatusEnum { operating, alert }
