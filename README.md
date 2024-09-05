@@ -1,74 +1,77 @@
 # Tractian App
 
-Teste prático para a TRACTIAN
+Practical test for TRACTIAN
 
-
-### ✔️ Projeto
-- Projeto desenvolvido com Flutter versão 3.24.1
-- Gestão de Estado - [GetX](https://pub.dev/packages/get)
+### ✔️ Project
+- Project developed with Flutter version 3.24.1
+- State management - [GetX](https://pub.dev/packages/get)
 - Client HTTP - [Dio](https://pub.dev/packages/dio)
 - Local Storage - [SharedPreferences](https://pub.dev/packages/shared_preferences)
-- Imagens - [FlutterSVG](https://pub.dev/packages/flutter_svg)
+- Images - [FlutterSVG](https://pub.dev/packages/flutter_svg)
 ---
 <br />
 
-### ✔️ Arquitetura
-- Projeto Clean Code
-- Projeto dividido em camadas do clean architecture
-- **Camada Domain**
-  - Definição das entidades da aplicação, casos de uso, repositorios e enums;
-- **Camada Data**
-  - Implementação da camada de domínio; definição dos data sources e cliente http;
-- **Camada Infra**
-  - Implementação dos data sources e cliente http definidos na camada de dados;
-- **Camada Design System**
-  - Implementação dos componentes de design system utilizados na aplicação: icones, buttons, cores, input e estilos de texto.
-- **Camada Presentation**
-  - Implementação das telas e widgets da aplicação;
-- Translations para permitir múltiplos idiomas
-  - Suporte adicionado para o idioma pt-BR;
+### ✔️ Architecture
+- Project Clean Code
+- Clean architecture layered design
+- **Domain Layer**
+  - Defining entities, use cases, repositories and enums;
+- **Data Layer**
+  - Implementation of the domain layer; definition of data sources and http client;
+- **Infra Layer**
+  - Implementation of data sources and http client defined in the data layer;
+- **Presentation Layer**
+  - Implementation of application screens and widgets;
+- **Design System**
+  - Implementation of the design system components used in the application: icons, buttons, colors, input and text styles.
+- Translations to allow multiple languages
+  - Added support for pt-BR language;
 ---
 <br />
 
-### ✔️ Testes
-- Testes unitário e widgets implementados na pasta **/test**
-- Resultados:
+### ✔️ Flutter Tests
+- Unit tests and widgets implemented in the folder **/test**
+
+- Results:
 <p align="left"> 
   <img src="screenshots/test/test.png" width="300" height="150" title="hover text"> 
 </p>
-- Testes de integração implementados na pasta **/integration_test**
-- Resultados:
+
+- Integration tests implemented in the folder **/integration_test**
+- Results:
 
 <p align="left"> 
   <img src="screenshots/integration_test/menu.png" width="300" height="150" title="hover text"> 
   <img src="screenshots/integration_test/assets.png" width="300" height="150"  title="hover text"> 
 </p>
 
-- Cobertura de código em **70%** medido pelo Flutter Coverage
+- Code coverage at **70%** as measured by Flutter Coverage
+
 <p align="left"> 
   <img src="screenshots/test/coverage.png" width="300" height="150"  title="hover text">
 </p>
 
 
-### 📡 API de dados
-- API Rest utilizada para consultar dados do aplicativo
+### 📡 API
+- Rest API used to query application data
 - Base Url: https://fake-api.tractian.com
-- Endpoint para busca de empresas: GET https://fake-api.tractian.com/companies
-- Endpoint para consulta da coleção de localizações de uma empresa: GET https://fake-api.tractian.com/companies/{{companyId}}/locations
-- Endpoint para consulta da coleção de assets e componentes de uma empresa: GET https://fake-api.tractian.com/companies/{{companyId}}/assets
-- Collections mapeada pelo Insomnia e adicionada na pasta **/api**
+- Endpoint for company search: GET https://fake-api.tractian.com/companies
+- Endpoint for querying a company's location collection: GET https://fake-api.tractian.com/companies/{companyId}/locations
+- Endpoint for querying a company's collection of assets and components: GET https://fake-api.tractian.com/companies/{companyId}/assets
+>
+- Collections mapped by Insomnia and added to the folder **/api**
 ---
 <br />
 
 ### ✔️ Performance
-- Programação concorrente utilizando **isolates** do dart para criar threads independentes e poder manipular grande volume de dados sem perder a performace do aplicação.
-- Aplicação API Cache utilizando o SharedPreferences para permitir **Offile First**, quando o usuário não possuir conexão com a internet.
+- Concurrent programming using dart **isolates** to create independent threads and be able to manipulate large volumes of data without losing application performance.
+- API Cache application using SharedPreferences to allow **Offline First**, when the user does not have an internet connection.
 
 ---
 <br />
 
-### 🗺️ Telas do Aplicativo
-A seguir algumas imagens do App
+### 🗺️ Application Screens
+Below are some images of the App
 <p align="center"> 
   <img src="screenshots/splash.jpeg" width="30%" title="hover text"> 
   <img src="screenshots/menu.jpeg" width="30%" title="hover text"> 
@@ -87,9 +90,9 @@ A seguir algumas imagens do App
 ---
 <br />
 
-### 🔥 Executar Tractian App
-- O App está disponível na raíz do projeto e pode ser baixado clicando no link: [tractian-app-release.apk](https://github.com/cassiomeira12/tractian/blob/master/tractian-app-release.apk)
-- O App pode ser executado rodando os comandos do Flutter
+### 🔥 How to Run Tractian App
+- The App is available at the root of the project and can be downloaded by clicking on the link: [tractian-app-release.apk](https://github.com/cassiomeira12/tractian/blob/master/tractian-app-release.apk)
+- The App can be run by running Flutter commands
   - **flutter pub get**
   - **flutter run**
 ---
