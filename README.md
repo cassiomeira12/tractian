@@ -33,17 +33,22 @@ Teste prático para a TRACTIAN
 ### ✔️ Testes
 - Testes unitário e widgets implementados na pasta **/test**
 - Resultados:
+<p align="left"> 
   <img src="screenshots/test/test.png" width="300" height="150" title="hover text"> 
+</p>
 - Testes de integração implementados na pasta **/integration_test**
 - Resultados:
 
-<p align="center"> 
+<p align="left"> 
   <img src="screenshots/integration_test/menu.png" width="300" height="150" title="hover text"> 
   <img src="screenshots/integration_test/assets.png" width="300" height="150"  title="hover text"> 
 </p>
 
 - Cobertura de código em **70%** medido pelo Flutter Coverage
+<p align="left"> 
   <img src="screenshots/test/coverage.png" width="300" height="150"  title="hover text">
+</p>
+
 
 ### 📡 API de dados
 - API Rest utilizada para consultar dados do aplicativo
