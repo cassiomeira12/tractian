@@ -101,54 +101,60 @@ class AssetsPage extends GetView<AssetsController> {
               color: AppColors.divider,
               height: 16,
             ),
-            if (controller.isLoading.value)
-              const Expanded(
-                child: Center(
-                  child: CircularProgressIndicator(),
-                ),
-              ),
-            if (controller.errorMessage.isNotEmpty)
-              Expanded(
-                child: Center(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        controller.errorMessage.value,
-                      ),
-                      TextButton(
-                        onPressed: controller.tryAgain,
-                        child: Text(
-                          'try_again'.tr,
+            Obx(() {
+              if (controller.isLoading.value) {
+                return const Expanded(
+                  child: Center(
+                    child: CircularProgressIndicator(),
+                  ),
+                );
+              }
+
+              if (controller.errorMessage.isNotEmpty) {
+                return Expanded(
+                  child: Center(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          controller.errorMessage.value,
                         ),
-                      ),
-                    ],
+                        TextButton(
+                          onPressed: controller.tryAgain,
+                          child: Text(
+                            'try_again'.tr,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ),
-            if (controller.isLoading.isFalse && controller.list.isEmpty)
-              Expanded(
-                child: Center(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        'empty_list'.tr,
-                      ),
-                    ],
+                );
+              }
+
+              if (controller.list.isEmpty) {
+                return Expanded(
+                  child: Center(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          'empty_list'.tr,
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ),
-            if (controller.list.isNotEmpty)
-              Expanded(
+                );
+              }
+              double deviceWidth = MediaQuery.of(context).size.width;
+              return Expanded(
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
                     Scrollbar(
                       thumbVisibility: true,
                       child: SizedBox(
-                        width: MediaQuery.of(context).size.width +
-                            controller.additionalWidth * 10,
+                        width: deviceWidth +
+                            controller.additionalWidth * deviceWidth * .05,
                         height: MediaQuery.of(context).size.height,
                         child: ListView.builder(
                           key: const Key('assets_key'),
@@ -171,7 +177,8 @@ class AssetsPage extends GetView<AssetsController> {
                     ),
                   ],
                 ),
-              ),
+              );
+            }),
           ],
         );
       }),

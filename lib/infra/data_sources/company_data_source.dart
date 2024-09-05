@@ -23,7 +23,7 @@ class CompanyDataSource implements ICompanyDataSource {
       }
 
       throw Exception();
-    } catch (error) {
+    } on HttpException catch (_) {
       rethrow;
     }
   }

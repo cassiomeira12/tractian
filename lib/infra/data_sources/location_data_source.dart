@@ -26,7 +26,7 @@ class LocationDataSource implements ILocationDataSource {
       }
 
       throw Exception();
-    } catch (error) {
+    } on HttpException catch (_) {
       rethrow;
     }
   }

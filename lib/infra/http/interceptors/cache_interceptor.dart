@@ -34,7 +34,7 @@ class CacheInterceptor extends Interceptor {
         handler.resolve(
           Response(
             data: data,
-            // statusCode: 200,
+            statusCode: 200,
             requestOptions: err.requestOptions,
           ),
         );

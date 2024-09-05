@@ -25,7 +25,7 @@ class AssetDataSource implements IAssetDataSource {
       }
 
       throw Exception();
-    } catch (error) {
+    } on HttpException catch (_) {
       rethrow;
     }
   }
