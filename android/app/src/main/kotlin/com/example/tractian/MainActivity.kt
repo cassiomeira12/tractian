@@ -1,4 +1,4 @@
-package com.example.tractian
+package com.cassio.tractian
 
 import io.flutter.embedding.android.FlutterActivity
 

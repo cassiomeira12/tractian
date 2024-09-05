@@ -1,0 +1,132 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-08-31T16:36:41.647Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "req_5d58011a50aa402492cdfca0db732374",
+      "parentId": "wrk_48a4e533fa0043e8b05dc68dd182f616",
+      "modified": 1725121821980,
+      "created": 1725121804805,
+      "url": "{{ _.url }}/companies",
+      "name": "companies",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1725121804805,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_48a4e533fa0043e8b05dc68dd182f616",
+      "parentId": null,
+      "modified": 1725121766983,
+      "created": 1725121766983,
+      "name": "Tractian",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_48f52d18f1cc436bae47a7f8e231bf7c",
+      "parentId": "wrk_48a4e533fa0043e8b05dc68dd182f616",
+      "modified": 1725122103919,
+      "created": 1725121832306,
+      "url": "{{ _.url }}/companies/{{ _.company_id }}/locations",
+      "name": "locations by company",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1725121804705,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_99b60040a2534cc8971fb461068182c2",
+      "parentId": "wrk_48a4e533fa0043e8b05dc68dd182f616",
+      "modified": 1725122105864,
+      "created": 1725122056338,
+      "url": "{{ _.url }}/companies/{{ _.company_id }}/assets",
+      "name": "assets by company",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/2023.5.8"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1725121804605,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_58cfb70f140b9aef0030625b43912447ac100ace",
+      "parentId": "wrk_48a4e533fa0043e8b05dc68dd182f616",
+      "modified": 1725122042360,
+      "created": 1725121766987,
+      "name": "Base Environment",
+      "data": {
+        "url": "https://fake-api.tractian.com",
+        "company_id": "{% response 'body', 'req_5d58011a50aa402492cdfca0db732374', 'b64::JFswXS5pZA==::46b', 'always', 60 %}"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "url",
+          "company_id"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1725121766987,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_58cfb70f140b9aef0030625b43912447ac100ace",
+      "parentId": "wrk_48a4e533fa0043e8b05dc68dd182f616",
+      "modified": 1725121766988,
+      "created": 1725121766988,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    }
+  ]
+}
