@@ -88,7 +88,9 @@ Below are some images of the App
 </p>
 
 ---
-<br />
+
+## Video of the project running
+https://github.com/user-attachments/assets/1d600e0c-6b73-4b6d-a5d2-616649f52674
 
 ### 🔥 How to Run Tractian App
 - The App is available at the root of the project and can be downloaded by clicking on the link: [tractian-app-release.apk](https://github.com/cassiomeira12/tractian/blob/master/tractian-app-release.apk)
